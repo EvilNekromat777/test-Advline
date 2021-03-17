@@ -1,1 +1,4 @@
-console.log('Hello, World');
+var myCarousel = document.querySelector('#carouselExampleFade')
+var carousel = new bootstrap.Carousel(myCarousel, { 
+  interval: false
+});

@@ -1,8 +1,15 @@
 // Подключаем шрифты
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+	font-family: "BebasNeueCyrillic";
+	src: url("../fonts/ofont.ru_Bebas-Neue.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	}
 
 
 // Обнуление: общие параметры
@@ -73,6 +80,8 @@
 
 .page{
 	padding: 0px 0px 184px 0px;
+	display: flex;
+	justify-content: space-between;
 	&__info{
 		font-family: "Montserrat";
 	}
@@ -122,3 +131,56 @@
 	}
 }
 
+//================================================>
+
+//.carousel.pointer-event {
+//	width: 351px;
+//}
+.carousel-item{
+	transition: all 1s ease 0s;
+	&__title{
+		font-family: "Montserrat";
+		font-weight: 500;
+		font-style: normal;
+		font-size: 20px;
+		line-height: 28px;
+	}
+	&__p{
+		font-family: "BebasNeueCyrillic";
+		font-style: normal;
+		font-size: 96px;
+		font-weight: 400;
+		line-height: 100%;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+	}
+	&__block{
+		display: flex;
+	}
+}
+
+.carousel{
+	position: relative;
+	width: 351px;
+}
+.carousel-indicators.carousel-indicators{
+	position: absolute;
+	top: -40px;
+	left: 0;
+	justify-content: start;
+	margin: 0;
+}
+
+.carousel-indicators.carousel-indicators li{
+		background: #fff;
+		border: 0;
+		opacity: 1;
+		border-radius: 50%;
+		width: 12px;
+		height: 12px;
+		cursor: pointer;
+		transition: all 1s ease 0s;
+}
+.carousel-indicators li.active{
+	background: #000;
+}
