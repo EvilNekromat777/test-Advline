@@ -94,10 +94,24 @@ h6 {
 
 .wrapper {
   overflow: hidden;
+  position: relative;
   min-height: 100%;
   width: 100%;
   background: linear-gradient(315deg, #ae320a 19.87%, #f75d2b 80.11%), #0a0e20;
   color: #fff;
+}
+
+.wrapper.fon-green {
+  background: linear-gradient(315deg, #37c058 19.87%, #4bdb6d 80.11%), #0a0e20;
+}
+
+.wrapper.fon-yellow {
+  background: linear-gradient(315deg, #ffc060 19.87%, #ffe79a 80.11%), #0a0e20;
+  color: #000;
+}
+
+.wrapper.fon-lightGreen {
+  background: linear-gradient(315deg, #8fbe15 19.87%, #aad50e 80.11%), #0a0e20;
 }
 
 .container-xxl {
@@ -134,6 +148,9 @@ h6 {
   color: #fff;
 }
 
+.page {
+  padding: 0px 0px 184px 0px;
+}
 .page__info {
   font-family: "Montserrat";
 }
@@ -160,4 +177,22 @@ h6 {
   opacity: 0.8;
   padding: 0;
   margin: 0;
+}
+
+.svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.svg__orange {
+  bottom: -143px;
+}
+.svg__green {
+  opacity: 0;
+}
+.svg__yellow {
+  opacity: 0;
+}
+.svg__lightGreen {
+  opacity: 0;
 }
