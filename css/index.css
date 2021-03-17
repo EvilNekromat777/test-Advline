@@ -122,6 +122,8 @@ h6 {
 
 .container-xxl {
   max-width: 1130px;
+  position: relative;
+  z-index: 2;
 }
 
 .header {
@@ -136,10 +138,22 @@ h6 {
   border: 1px #fff solid;
   font-size: 16px;
   line-height: 24px;
-  padding: 11px 15px;
+  width: 143px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border-radius: 6%;
   font-weight: 600;
+}
+.header__button a {
+  text-decoration: none;
+  color: #fff;
+}
+.header__button a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 .header__logo {
   font-size: 26px;
@@ -196,13 +210,13 @@ h6 {
   bottom: -143px;
 }
 .svg__green {
-  opacity: 0;
+  display: none;
 }
 .svg__yellow {
-  opacity: 0;
+  display: none;
 }
 .svg__lightGreen {
-  opacity: 0;
+  display: none;
 }
 
 .carousel-item {
@@ -254,4 +268,29 @@ h6 {
 
 .carousel-indicators li.active {
   background: #000;
+}
+
+.button__slider {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  border: 1px #fff solid;
+  width: 290px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 20px 0px 0px 0px;
+}
+.button__slider a {
+  text-decoration: none;
+  color: #fff;
+}
+.button__slider a:hover {
+  text-decoration: none;
+  color: #fff;
 }
