@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Lato";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: "Lato";
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+  background: linear-gradient(315deg, #ae320a 19.87%, #f75d2b 80.11%), #0a0e20;
+  color: #fff;
+}
+
+.container-xxl {
+  max-width: 1230px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0px 0px 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+}
+.header__button {
+  border: 1px #fff solid;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 11px 15px;
+  cursor: pointer;
+  border-radius: 6%;
+  font-weight: 600;
+}
+.header__logo {
+  font-size: 26px;
+  font-weight: 600;
+}
+.header__logo a {
+  text-decoration: none;
+  color: #fff;
+}
+.header__logo a:hover {
+  text-decoration: none;
+  color: #fff;
+}
