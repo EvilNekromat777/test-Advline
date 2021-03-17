@@ -22,13 +22,13 @@
 
 //=========================================================>
 .container-xxl{
-	max-width: 1230px;
+	max-width: 1130px;
 }
 .header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 32px 0px 0px 0px;
+	padding: 32px 0px 130px 0px;
 	font-family: "Montserrat";
    font-style: normal;
 	&__button{
@@ -51,5 +51,36 @@
 			text-decoration: none;
 			color: #fff;
 	  }
+	}
+}
+//=========================================================>
+
+.page{
+	&__info{
+		font-family: "Montserrat";
+	}
+	&__title{
+		max-width: 585px;
+		font-weight: 700;
+		font-size: 46px;
+		line-height: 54px;
+		margin-bottom: 18px;
+	}
+	&__info-item{
+		max-width: 491px;
+		h2{
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 28px;
+			margin: 16px 0px 0px 0px;
+		}
+		p{
+			font-size: 20px;
+			line-height: 28px;
+			opacity: 0.8;
+			padding: 0;
+			margin: 0;
+		}
 	}
 }
