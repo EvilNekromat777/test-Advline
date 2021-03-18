@@ -103,21 +103,11 @@ h6 {
   position: relative;
   min-height: 100%;
   width: 100%;
-  background: linear-gradient(315deg, #ae320a 19.87%, #f75d2b 80.11%), #0a0e20;
   color: #fff;
 }
 
-.wrapper.fon-green {
-  background: linear-gradient(315deg, #37c058 19.87%, #4bdb6d 80.11%), #0a0e20;
-}
-
-.wrapper.fon-yellow {
-  background: linear-gradient(315deg, #ffc060 19.87%, #ffe79a 80.11%), #0a0e20;
+.wrapper.active {
   color: #000;
-}
-
-.wrapper.fon-lightGreen {
-  background: linear-gradient(315deg, #8fbe15 19.87%, #aad50e 80.11%), #0a0e20;
 }
 
 .container-xxl {
@@ -134,38 +124,32 @@ h6 {
   font-family: "Montserrat";
   font-style: normal;
 }
-.header__button {
-  border: 1px #fff solid;
-  font-size: 16px;
-  line-height: 24px;
-  width: 143px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 6%;
-  font-weight: 600;
-}
-.header__button a {
-  text-decoration: none;
-  color: #fff;
-}
-.header__button a:hover {
-  text-decoration: none;
-  color: #fff;
-}
 .header__logo {
   font-size: 26px;
   font-weight: 600;
 }
 .header__logo a {
   text-decoration: none;
-  color: #fff;
 }
 .header__logo a:hover {
   text-decoration: none;
   color: #fff;
+}
+
+.link {
+  color: #fff;
+  animation: change-background 1s linear;
+}
+.link:hover {
+  color: #fff;
+}
+
+.link.active {
+  color: #000;
+  animation: change-background 1s linear;
+}
+.link.active:hover {
+  color: #000;
 }
 
 .page {
@@ -203,22 +187,72 @@ h6 {
 
 .svg {
   position: absolute;
-  right: 0;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .svg__orange {
+  display: none;
+  background: linear-gradient(315deg, #ae320a 19.87%, #f75d2b 80.11%), #0a0e20;
+  animation: change-background 1s linear;
+}
+.svg__orange svg {
+  position: absolute;
   bottom: -143px;
+  right: 0;
+}
+.svg__orange.active {
+  display: block;
 }
 .svg__green {
   display: none;
+  background: linear-gradient(315deg, #37c058 19.87%, #4bdb6d 80.11%), #0a0e20;
+  animation: change-background 1s linear;
+}
+.svg__green svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.svg__green.active {
+  display: block;
 }
 .svg__yellow {
   display: none;
+  background: linear-gradient(315deg, #ffc060 19.87%, #ffe79a 80.11%), #0a0e20;
+  animation: change-background 1s linear;
+}
+.svg__yellow svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.svg__yellow.active {
+  display: block;
 }
 .svg__lightGreen {
   display: none;
+  background: linear-gradient(315deg, #8fbe15 19.87%, #aad50e 80.11%), #0a0e20;
+  animation: change-background 1s linear;
+}
+.svg__lightGreen svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.svg__lightGreen.active {
+  display: block;
 }
 
+@keyframes change-background {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .carousel-item {
   transition: all 1s ease 0s;
 }
@@ -270,27 +304,37 @@ h6 {
   background: #000;
 }
 
-.button__slider {
+.button {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 38px;
   border: 1px #fff solid;
-  width: 290px;
-  height: 70px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   border-radius: 10px;
+  font-weight: 600;
+}
+.button a {
+  text-decoration: none;
+  color: #fff;
+}
+.button a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button__header {
+  font-size: 16px;
+  line-height: 24px;
+  width: 143px;
+  height: 48px;
+}
+
+.button__slider {
+  font-size: 30px;
+  line-height: 38px;
+  width: 290px;
+  height: 70px;
   margin: 20px 0px 0px 0px;
-}
-.button__slider a {
-  text-decoration: none;
-  color: #fff;
-}
-.button__slider a:hover {
-  text-decoration: none;
-  color: #fff;
 }

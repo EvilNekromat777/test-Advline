@@ -22,26 +22,10 @@
 	 position: relative;
     min-height: 100%;
     width: 100%;
-	 background: linear-gradient(
-315deg
-, #ae320a 19.87%, #f75d2b 80.11%),#0a0e20;
     color: #fff;
 }
-.wrapper.fon-green{
-	background: linear-gradient(
-315deg
-, #37c058 19.87%, #4bdb6d 80.11%),#0a0e20;
-}
-.wrapper.fon-yellow{
-	background: linear-gradient(
-	315deg
-	, #ffc060 19.87%, #ffe79a 80.11%),#0a0e20;
-		color: #000;
-}
-.wrapper.fon-lightGreen{
-	background: linear-gradient(
-315deg
-, #8fbe15 19.87%, #aad50e 80.11%),#0a0e20;
+.wrapper.active{
+	color: #000;
 }
 //=========================================================>
 .container-xxl{
@@ -56,39 +40,31 @@
 	padding: 32px 0px 130px 0px;
 	font-family: "Montserrat";
    font-style: normal;
-	&__button{
-		border: 1px #fff solid;
-		font-size: 16px;
-		line-height: 24px;
-		width: 143px;
-		height: 48px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-		border-radius: 6%;
-		font-weight: 600;
-		a{
-			text-decoration: none;
-			color: #fff;
-		}
-		a:hover {
-			text-decoration: none;
-			color: #fff;
-	  }
-	}
 	&__logo{
 		font-size: 26px;
 		font-weight: 600;
 		a{
 			text-decoration: none;
-			color: #fff;
 		}
 		a:hover {
 			text-decoration: none;
 			color: #fff;
 	  }
 	}
+}
+.link{
+	color: #fff;
+	animation: change-background 1s linear;
+	&:hover {
+		color: #fff;
+  }
+}
+.link.active{
+	color: #000;
+	animation: change-background 1s linear;
+	&:hover {
+		color: #000;
+  }
 }
 //=========================================================>
 
@@ -129,23 +105,80 @@
 //============================================>
 .svg{
 	position: absolute;
-		right: 0;
-		bottom: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
 	&__orange{
-		bottom: -143px;
+		display: none;
+		background: linear-gradient(
+315deg
+, #ae320a 19.87%, #f75d2b 80.11%),#0a0e20;
+animation: change-background 1s linear;
+		svg{
+			position: absolute;
+			bottom: -143px;
+			right: 0;
+		}
    }
+	&__orange.active{
+		display: block;
+	}
 	&__green{
 		display: none;
+		background: linear-gradient(
+315deg
+, #37c058 19.87%, #4bdb6d 80.11%),#0a0e20;
+animation: change-background 1s linear;
+		svg{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__green.active{
+		display: block;
 	}
 	&__yellow{
 		display: none;
+		background: linear-gradient(
+	315deg
+	, #ffc060 19.87%, #ffe79a 80.11%),#0a0e20;
+		animation: change-background 1s linear;
+		svg{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__yellow.active{
+		display: block;
 	}
 	&__lightGreen{
 		display: none;
+		background: linear-gradient(
+315deg
+, #8fbe15 19.87%, #aad50e 80.11%),#0a0e20;
+animation: change-background 1s linear;
+		svg{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__lightGreen.active{
+		display: block;
 	}
 }
-
-//================================================>
+ @keyframes change-background {
+	0% {
+		opacity: 0.5;
+  }
+  100% {
+		opacity: 1;
+ }}
+////================================================>
 
 .carousel-item{
 	transition: all 1s ease 0s;
@@ -196,21 +229,21 @@
 	background: #000;
 }
 
-.button__slider{
+
+//&__item.active .mortgage__string-text{
+//	color: #FFFFFF;
+//}
+//==================================================================>
+.button{
 	font-family: "Montserrat";
 	font-style: normal;
-	font-weight: 600;
-	font-size: 30px;
-	line-height: 38px;
 	border: 1px #fff solid;
-	width: 290px;
-	height: 70px;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	cursor: pointer;
 	border-radius: 10px;
-	margin: 20px 0px 0px 0px;
+	font-weight: 600;
 	a{
 		text-decoration: none;
 		color: #fff;
@@ -219,5 +252,18 @@
 		text-decoration: none;
 		color: #fff;
   }
+}
+.button__header{
+	font-size: 16px;
+	line-height: 24px;
+	width: 143px;
+	height: 48px;
+}
+.button__slider{
+	font-size: 30px;
+	line-height: 38px;
+	width: 290px;
+	height: 70px;
+	margin: 20px 0px 0px 0px;
 }
 
